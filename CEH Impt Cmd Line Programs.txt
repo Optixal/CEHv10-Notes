@@ -1,0 +1,59 @@
+NMAP
+nmap -T4 -n -sS 192.168.0.1/24 # SYN
+# Study -sT (tcp), -sS (syn), -sA (ack), -sF (fin), -sN (null), -sX (xmas), -sI (idle), -sU (udp), -sV (service detection), -O (OS detection)
+# -sA: ACK - Filtered/Unfiltered - For detecting firewall, unfiltered (open/close) returns RST packet
+# -sF: FIN - Closed/Open|Filtered - RST when closed, no response when open|filtered
+# 	-sX: XMAS - FIN, PSH, URG - Same as FIN
+#	-sN: NULL - Same as FIN
+# -sU: UDP - Open/Closed/Filtered/Open|Filtered - UDP response when open, ICMP type 3 code 3 (Port Unreachable) when closed, other ICMP when filtered, no response when open|filtered
+# -sI <host:port>: IDLE - Stealth scan using zombie host and IP fragmentation ID
+
+NETCAT
+nc -zv -w 1 google.com 21 # Scan google's port 21, -z scan, -v verbose, -w timeout
+nc -lvp 6969 # Opens a server on 6969, -l listens, -v verbose, -p port 6969
+nc 192.168.1.54 6969 # Banner Grab with GET / HTTP/1.1 after connecting
+# CRYPTCAT, netcat alternative with encryption involved
+
+HPING3
+hping3 -c 3 --scan 1-3000 -S -V 192.168.1.254 # Scans port 1-3000 on 192.168.1.254 with 3 SYN packets each
+hping3 -c 100 -d 120 -S -p 21 --flood --rand-source google.com # Flood google with 100 counts, SYN packets with data size 120 bytes, on port 21, with random spoofed IP source
+
+FIREWALK
+firewalk -S1-1000 -i eth0 -n -pTCP 192.168.1.254 192.168.1.30 # Scan port 1-1000 through eth0, no hostname resolution, with TCP protocol, via gateway 192.168.1.254 against target 192.168.1.30
+
+NSLOOKUP
+nslookup
+	server ns1.google.com
+	set type=any # Or A (address), NS (nameserver), MX (mailserver), SOA (start of authority), CNAME (canonical name), PTR (pointer)
+	ls -d google.com # Zone transfer
+
+DIG
+dig www.google.com
+dig mx www.google.com # Get mail server entries
+dig axfr @ns1.google.com www.google.com # Zone transfer
+
+NBTSTAT
+nbtstat -A 192.168.1.254 # Get remote NetBIOS table
+nbtstat -n # Get local table
+
+JOHN THE RIPPER
+john shadow.txt
+john --wordlist=passwords.txt shadow.txt
+
+SSH
+ssh root@192.168.1.30
+ssh -L 6969:www.leet.com:21 optixal@www.leet.com # Tunnel FTP through local port 6969 to port 21 on leet.com
+
+TCPDUMP
+tcpdump -i eth0	# Capture on eth0
+tcpdump -w cap.log # Write to cap.log
+tcpdump -r cap.log # Read from cap.log
+
+WHOIS
+whois google.com
+# Important WHOIS Registrars:
+# ARIN - North America
+# APNIC - Asia Pacific
+# AFRINIC - Africa
+# LACNIC - Latin America and Caribbean
+# RIPE - Europe

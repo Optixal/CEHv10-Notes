@@ -1,0 +1,59 @@
+# Module 02 - Footprinting and Reconnaissance
+
+    ping
+        -f -l 1024          # Send 1024 byte ICMP echo request, no fragment, for checking network's max frame size
+        -i 3                # Send ICMP echo request with TTL of 3, can be used to manually traceroute a host
+*   tracert [host]          # Traceroute
+*   nslookup
+        - set type=a        # Get IP from domain name
+        - [host]
+        - set type=cname    # Get canonical name of domain, something like alias
+        - [host]
+        - set type=soa      # Get information about domain's authoritative server
+        - [host]
+*   pipl.com                # Online database for searching up people
+    firebug                 # Firefox plugin for debugging website (html, css, js, net, cookies, etc.)
+*   Web Data Extractor      # Web Spider for collecting emails, phone no, names, metadata, etc. Does not work on Win10.
+*   HTTrack                 # Website cloner
+*   eMailTrackerPro         # Trace emails, location, hops, network whois, email server ports, etc.
+    SmartWhois              # Whois tool
+    Path Analyzer Pro       # Traceroute Program, doesn't work on Win7/8/10
+**  Maltego                 # Intelligence and info gathering app. User/Pass:jaylun@jr9fds46y97.com
+**  recon-ng                # Metasploit-like tool for recon on domains
+        - workspaces list/add/select/delete
+        - Domains
+            - add domains microsoft.com, show domains
+            - load recon/domain-hosts/*, run
+            - load reverse_resolve, run
+            - show hosts
+        - Personal Information
+            - load recon/domains-contacts/whois_pocs, set SOURCE facebook.com, run, show contacts
+            - load recon/profiles-profiles/*, set SOURCE optixal, run, show profiles
+        - Pushpin Geomapping (May require API key) (Not working)
+            - add locations
+            - load recon/locations-locations/(reverse_)geocode
+            - show locations
+            - load recon/locations-pushpins/*, run
+        - load reporting
+            - show options
+            - set CREATOR optixal - etc.
+            - run
+            - back
+*   FOCA
+    Search Diggity
+
+# Module 03 - Scanning Networks
+
+**  hping3                  # A better ping program that uses TCP packets by default instead of ICMP packets
+        -c 3                # Count of 3 packets
+        --scan 1-3000 -S    # Scans ports 1 to 3000 with SYN TCP packets
+        -p 80 -S            # Scan port 80 with SYN TCP packets
+        --udp --rand-source --data 500  # Send random src UDP packets instead with data size of 500 bytes
+        --flood             # Sends packets as fast as possible, without caring about incoming replies
+        -V                  # Verbose mode
+        -D                  # Debug mode
+*   Colasoft Packet Builder # GUI for crafting custom packets and sending them
+    MegaPing
+*   Zenmap (nmap GUI)
+
+Page 196
