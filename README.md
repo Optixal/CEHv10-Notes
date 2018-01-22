@@ -1,15 +1,18 @@
 # CEHv9-Notes
 
-## Personal and Public Notes - Read Order
+## Personal and Public Notes
 
-1. CEH v9 Notes - Dads Man Cave.pdf
-2. CEH Cheatsheet.pdf
-3. CEH Cheatsheet 2.pdf
-4. CEH Read Topics.pdf
-5. CEH Impt Cmd Line Programs.txt
-6. CEH Tools.pdf
+All notes listed below are very useful, but to save time, you should read the most useful and important ones first. Here is the read order, starting from the most useful, to the least (but still somewhat useful).
 
-## Important Personal Notes
+1. Personal Reddit Comments Below
+2. CEH v9 Notes - Dads Man Cave.pdf
+3. CEH Cheatsheet.pdf
+4. CEH Cheatsheet 2.pdf
+5. CEH Read Topics.pdf
+6. CEH Impt Cmd Line Programs.txt
+7. CEH Tools.pdf
+
+## Personal Reddit Comments
 
 Here are a bunch of personal responses I made on reddit to CEH takers. I believe they will come in handy.
 
