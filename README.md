@@ -85,3 +85,9 @@ for nmap, also study the other flags that can be used along with scans. e.g: -T4
 for the rest of the tools, i did not encounter many questions that involved their syntaxes (probably only 1 question), so just know what they are used for and if you have time, learn their basic syntaxes. questions regarding those tools (other than nmap) will usually include them in a list of tools and ask which of them best suits the question's description. eg: http://www.aiotestking.com/ec-council/what-would-be-the-name-of-this-tool-5/
 
 ```
+
+---
+
+## Thanks For Reading
+
+*If you find these useful, make sure to star the repo to let me know you appreciate it :) All the best for your certification!*
