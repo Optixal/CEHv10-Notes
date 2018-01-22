@@ -90,4 +90,4 @@ for the rest of the tools, i did not encounter many questions that involved thei
 
 ## Thanks For Reading
 
-*If you find these useful, make sure to star :star: the repo to let me know you appreciate it :) All the best for your certification!*
+*If you find these useful, make sure to star:star: the repo to let me know you appreciate it :) All the best for your certification!*
