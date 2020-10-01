@@ -43,11 +43,12 @@ i've also compiled a bunch of notes which u may find useful, they are on github 
 
 last notes: after taking the exam, i realized that you do not need to memorize every tool out there in the wild, just study the popular ones that aren't outdated, as they'll throw u questions like "Which reconnaisance tool would you use for mapping out relational data of a target? Options: netcat, hping3, whois, maltego - ans: maltego", where the options usually consist of popular tools, and half of the options are definitely out. most of them can be found on kali linux. i also did some practice on http://www.aiotestking.com/ec-council/category/exam-312-50v8-certified-ethical-hacker-v8/ to prep for my exams.
 
+do it with interest
 all the best for yours!
 
 ---
 
-ur welcome!
+your welcome!
 
 nope i did not get those questions, i believe they'll ask more about the generalized standards (eg. pci-dss (payment cards), iso/iec 27001:2013 (infosec in a company), hipaa (healthcare), sarbanes oxley act (protect investors), dmca (protect content), fisma (federal operations)).
 
